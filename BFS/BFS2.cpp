@@ -2,23 +2,8 @@
 using namespace std;
 int mp[100][100], n;
 int X,Y;
-
-void print()
-{
-    for(int y = 0; y < n; y++)
-    {
-        for(int x = 0; x < n; x++)
-        {
-            cout<<mp[x][y]<<"  ";
-        }
-        cout<<endl;
-    }
-    cout<<endl;
-    cout<<endl;
-}
 void BFS(int k, int d)
 {
-    print();
     for(int y=0; y < n; y++)
     {
         for(int x=0; x < n; x++)
@@ -70,6 +55,10 @@ int main()
             {
                 X=x;
                 Y=y;
+            }
+            if(mp2[x][y]=='O')
+            {
+                mp[x][y] = -1;
             }
         }
     }
